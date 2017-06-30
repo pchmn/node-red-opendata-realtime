@@ -1,0 +1,17 @@
+{
+  "name": "node-red-opendata-realtime",
+  "version": "0.0.9",
+  "description": "API generique",
+  "keywords": [
+    "node-red"
+  ],
+  "node-red": {
+    "nodes": {
+      "app": "app/app.js"
+    }
+  },
+  "dependencies": {
+    "rxjs": "^5.4.1",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

@@ -1,0 +1,29 @@
+<script type="text/x-red" data-template-name="opendata-realtime">
+    <p>Get opendata data in real time</p>
+    <div class="form-row">
+        <label for="node-input-url"><i class="fa fa-tag"></i> API url</label>
+        <input type="text" id="node-input-url" placeholder="Url">
+    </div>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('opendata-realtime',{
+        category: 'function',
+        color: '#A6BBCF',
+        defaults: {
+            url: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "function.png",
+        label: function() {
+            return this.name || "opendata-realtime";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-help-name="opendata-realtime">
+    <p>A simple node that gets records from open data API.</p>
+    <p>You just have to specify the url you want to get data from in the node form.</p>
+    <p>Each record of the API response will be put in the <code>msg.payload</code>.</p>
+</script>
